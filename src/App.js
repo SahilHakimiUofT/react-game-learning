@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Link, Outlet } from "react-router-dom";
+// import your route components too
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>asdadasd</h1>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/breakout">Breakout Game</Link> | <Link to="/invoices">Invoices</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
